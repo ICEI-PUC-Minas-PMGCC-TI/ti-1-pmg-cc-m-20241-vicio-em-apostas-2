@@ -1,6 +1,7 @@
-# Nome do projeto
+# Projeto FVA
 
-Escreva um ou dois parágrafo resumindo o objetivo do seu projeto.
+O projeto fva tem como objetivo reduzir o vício em apostas utilizando da conscientização e do controle financeiro para gradualmente diminuir o vício.
+
 
 ## Alunos integrantes da equipe
 
