@@ -3,8 +3,8 @@ cff-version: 1.0.1
 message: Please cite this software using these metadata.
 title: 
 authors:
-  - Jardim 
-    Rafael 
+  -family-names: Nascimento Jardim 
+    given-names: Rafael 
   - family-names: 
     given-names: 
   - family-names: 
