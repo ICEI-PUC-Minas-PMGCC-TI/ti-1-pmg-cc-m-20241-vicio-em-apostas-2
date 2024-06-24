@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Depósitos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Controle de Depósitos em Casas de Aposta</h1>
+        <div class="input-section">
+            <label for="max-value">Valor Máximo (R$):</label>
+            <input type="number" id="max-value" placeholder="Digite o valor máximo">
+            <button onclick="startTracking()">Iniciar Contagem</button>
+        </div>
+        <div class="deposit-section" style="display: none;">
+            <h2>Adicionar Depósito</h2>
+            <label for="deposit-value">Valor do Depósito (R$):</label>
+            <input type="number" id="deposit-value" placeholder="Digite o valor do depósito">
+            <button onclick="addDeposit()">Adicionar</button>
+            <div id="warning" class="warning"></div>
+            <div id="current-total" class="total"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
