@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
-title: fim do vicio em apostas
+title: projeto FVA
 authors:
   -family-names: Nascimento Jardim 
     given-names: Rafael 
@@ -17,15 +17,15 @@ authors:
     given-names:
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Mara Freitas Diniz
+    given-names: Luciana 
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Henrinque Ramos Costa
+    given-names: Pedro
 keywords:
-  - 
-  - 
+  - Vício em apostas
+  - Apostas online
 repository-code: 
 license: CC-BY-4.0
 version: 1.0.0
@@ -34,19 +34,4 @@ date-released: 2022-07-14
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
 
-  - name-suffix: Professor
-    affiliation: PUC Minas
-    family-names: 
-    given-names: 
-  - name-suffix: Professor
-    affiliation: PUC Minas
-    family-names: 
-    given-names: 
-keywords:
-  - 
-  - 
-repository-code: 
-license: CC-BY-4.0
-version: 1.0.0
-date-released: 2022-07-14
->>>>>>> 576e4073eb686b7caee5801aac8f95491eb4d605
+  
