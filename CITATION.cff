@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
-title: 
+title: FVA
 authors:
   -family-names: Nascimento Jardim 
     given-names: Rafael 
@@ -33,20 +33,7 @@ date-released: 2022-07-14
 =======
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
-title: 
-authors:
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names:
+
   - name-suffix: Professor
     affiliation: PUC Minas
     family-names: 
