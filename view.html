@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Visualização de Notícias</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: rgb(224, 212, 212);
+        }
+        tr:nth-child(even) {
+            background-color: rgb(224, 212, 212);
+        }
+        tr:nth-child(odd) {
+            background-color: rgb(224, 212, 212);
+        }
+    </style>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Vício em Apostas</h1>
+        <nav>
+            <ul>
+                <li><a href="index2.html" target="_blank">Home</a></li>
+                <li><a href="cadastro.html" target="_blank">Cadastro</a></li>
+                <li><a href="view.html" target="_blank">conteudos gerais</a></li>
+                <li><a href="controle.html" target="_blank">Controle de Depósitos</a></li>
+                <li><a href="forum.html" target="_blank">forum</a></li>
+            </ul>
+        </nav>
+    </header>
+    <input type="text" id="searchBar" placeholder="Pesquisar conteudos...">
+    <table class="news-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Categoria</th>
+                <th>Título</th>
+                <th>Site</th>
+                <th>Descrição</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <script>
+        function leDados() {
+            let strDados = localStorage.getItem('db');
+            let objDados = {};
+
+            if (strDados) {
+                objDados = JSON.parse(strDados);
+            } else {
+                objDados = {
+                    noticias: []
+                };
+            }
+
+            return objDados;
+        }
+
+        function imprimeNoticias(filtro = '') {
+            let table = document.querySelector('.news-table');
+            let objDados = leDados();
+            let tableBody = table.querySelector('tbody') || table.createTBody();
+
+            tableBody.innerHTML = '';
+
+            for (let i = 0; i < objDados.noticias.length; i++) {
+                let noticia = objDados.noticias[i];
+
+                if (filtro && !(
+                    noticia.id.toLowerCase().includes(filtro) ||
+                    noticia.categoria.toLowerCase().includes(filtro) ||
+                    noticia.titulo.toLowerCase().includes(filtro) ||
+                    noticia.site.toLowerCase().includes(filtro) ||
+                    noticia.descricao.toLowerCase().includes(filtro)
+                )) {
+                    continue;
+                }
+
+                let newRow = tableBody.insertRow();
+
+                let idCell = newRow.insertCell();
+                let categoriaCell = newRow.insertCell();
+                let tituloCell = newRow.insertCell();
+                let siteCell = newRow.insertCell();
+                let descricaoCell = newRow.insertCell();
+
+                idCell.textContent = noticia.id;
+                categoriaCell.textContent = noticia.categoria;
+                tituloCell.textContent = noticia.titulo;
+                siteCell.textContent = noticia.site;
+                descricaoCell.textContent = noticia.descricao;
+            }
+        }
+
+        document.getElementById('searchBar').addEventListener('input', function() {
+            let filtro = this.value.toLowerCase();
+            imprimeNoticias(filtro);
+        });
+
+        // Initial call to display news articles when the page loads
+        imprimeNoticias();
+    </script>
+</body>
+</html>

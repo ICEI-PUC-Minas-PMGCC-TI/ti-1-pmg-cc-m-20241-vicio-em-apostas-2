@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórum sobre Vício em Apostas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Vício em Apostas</h1>
+        <nav>
+            <ul>
+                <li><a href="index2.html" target="_blank">Home</a></li>
+                <li><a href="cadastro.html" target="_blank">Cadastro</a></li>
+                <li><a href="view.html" target="_blank">conteudos gerais</a></li>
+                <li><a href="controle.html" target="_blank">Controle de Depósitos</a></li>
+                <li><a href="forum.html" target="_blank">forum</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="bot-section">
+            <h2>Dúvidas Frequentes</h2>
+            <div class="question-container">
+                <button onclick="getAnswer(1)">Como diminuir o vício em aposta?</button>
+                <button onclick="getAnswer(2)">Por que as pessoas viciam em aposta?</button>
+                <button onclick="getAnswer(3)">Qual perigo das apostas?</button>
+            </div>
+            <div id="bot-answers-container"></div>
+        </section>
+        <section id="chat-section">
+            <h2>Conversa entre Usuários</h2>
+            <div id="chat-box"></div>
+            <input type="text" id="user-message" placeholder="Digite sua mensagem">
+            <button onclick="sendMessage()">Enviar</button>
+        </section>
+    </main>
+    <script src="script2.js"></script>
+</body>
+</html>
